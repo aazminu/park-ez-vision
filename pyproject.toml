@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "park-ez"
+version = "1.0.0"
+description = "Park-EZ: Real-Time Computer-Vision Accessible Parking Detection, Temporal Kalman Occupancy Smoothing & Campus Lot Routing Engine (1st Place SMU OIT Challenge @ HackSMU VI)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Abdullah Azmi", email = "m4u5t4@u.northwestern.edu" }
+]
+keywords = ["computer-vision", "parking-occupancy", "ada-accessibility", "kalman-filter", "astar-routing", "hacksmu"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[project.urls]
+Homepage = "https://abdullahazmi.com"
+Repository = "https://github.com/aazminu/park-ez-vision"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
